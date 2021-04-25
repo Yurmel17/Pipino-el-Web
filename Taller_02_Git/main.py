@@ -1,1 +1,2 @@
-print ("Hola Mundo")
+if _name_ == "_main_":
+      print("hola mundo")
