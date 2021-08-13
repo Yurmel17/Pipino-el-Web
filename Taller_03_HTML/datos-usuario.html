@@ -37,6 +37,41 @@
         <input type="file" name="foto-usuario" id="foto-usuario"/>
 
         <input type="checkbox" name="estudiante" id="estudiante"><label for="estudiante">Estudiante</label>
+
+        <fieldset>
+            <legend>Datos Personales</legend>
+            <label for="departamento-usuario">Departamento</label>
+            <select name="identificacion-tipo" id="identificacion-tipo">
+                <option selected value="santander">Santander</option>
+                <option value="boyaca">Boyaca</option>
+            </select>
+
+            <label for="nacimiento-usuario">Fecha de nacimiento</label>
+            <!-- Coloque este div por si acaso, podeis quitarlo si es mortal :p -->
+            <div>
+                <input type="number" name="dia-nacimiento" id="dia-nacimiento">
+                de
+                <select name="mes-nacimiento" id="mes-nacimiento">
+                    <option value="1">enero</option>
+                </select>
+                de
+                <input type="number" name="a-nacimiento" id="a-nacimiento">
+            </div>
+
+            <label for="temas-usuario">Temas de interés</label>
+            <select name="temas-usuario" size="5" multiple="multiple">  
+                <option value="admin-base-datos"> Administracion de bases de datos </option>  
+                <option value="programacion"> Analisis y programacion </option>  
+                <option value="arquitectura"> Arquitectura </option>  
+                <option value="calidad"> Calidad </option>  
+                <option value="erc"> ERC, CRM, Business inteligence </option>  
+                <option value="gatitos"> Fotos de gatitos </option>  
+            </select> 
+
+        </fieldset>
+
+        <input type="submit" value="Guardar Cambios">
+        <input type="reset" value="Borrar los datos introducidos">
     </form>
 
 </body>
