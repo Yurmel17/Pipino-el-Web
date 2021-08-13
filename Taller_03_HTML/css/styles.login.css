@@ -1,0 +1,77 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+
+.c-logos {
+    display: flex;
+
+    justify-content: space-evenly;
+}
+
+.c-logos img {
+    height: 100px;
+}
+
+form {
+    margin-top: 20px;
+    height: 500px;
+    width: 400px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form > div {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+form label {
+    width: 20%;
+}
+
+form input:focus {
+    outline: none;
+}
+
+form input {
+    width: 70%;
+}
+
+form input[type="submit"] {
+    margin-top: 20px;
+    margin-bottom: 50px;
+    width: 120px;
+    height: 25px;
+
+    outline: none;
+    border: none;
+
+    color: white;
+    background-color: hsl(240, 31%, 37%);
+    border-radius: 5px;
+}
+
+form input[type="submit"]:hover {
+    background-color: hsl(240, 31%, 20%);
+    cursor: pointer;
+}
