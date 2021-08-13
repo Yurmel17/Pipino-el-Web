@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruti datos de usuario</title>
+</head>
+<body>
+    <h1>Rellena tu CV</h1>
+
+    <form action="index.html" method="post">
+        <label for="nombre-usuario">Nombres</label>
+        <input type="text" name="nombre-usuario" id="nombre-usuario"/>
+
+        <label for="apellidos-usuario">Apellidos</label>
+        <input type="text" name="apellidos-usuario" id="apellidos-usuario"/>
+
+        <label for="contra-usuario">Contraseña</label>
+        <input type="text" name="contra-usuario" id="contra-usuario"/>
+
+        <label for="confcontra-usuario">Confirme Contraseña</label>
+        <input type="text" name="confcontra-usuario" id="confcontra-usuario"/>
+
+        <label for="identificacion-usuario">Identificación</label>
+        <select name="identificacion-tipo" id="identificacion-tipo">
+            <option selected value="ti">TI</option>
+            <option value="cc">CC</option>
+        </select>
+        <input type="text" name="identificacion-usuario" id="identificacion-usuario"/>
+
+        <label for="sexo-usuario">Sexo</label>
+        <input type="radio" value="hombre" name="sexo-usuario" id="masculino"/><label for="masculino">Hombre</label>
+        <input type="radio" value="mujer" name="sexo-usuario" id="femenino"/><label for="femenino">Mujer</label>
+
+        <label for="foto-usuario">Incluir mi foto</label>
+        <input type="file" name="foto-usuario" id="foto-usuario"/>
+
+        <input type="checkbox" name="estudiante" id="estudiante"><label for="estudiante">Estudiante</label>
+    </form>
+
+</body>
+</html>
