@@ -1,0 +1,44 @@
+*,
+*:: after,
+*:: before {
+    box-sizing: border-box;
+}
+:root {
+    --jose-background: #9C5951;
+}
+
+html,
+body {
+    margin         : 0;
+    padding        : 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    display        : flex;
+    flex-direction : column;
+    justify-content: center;
+    align-items    : center;
+    height         : 100vh;
+    width          : 100vw;
+}
+
+form {
+    display       : flex;
+    flex-direction: column;
+}
+
+fieldset {
+    display       : flex;
+    flex-direction: column;
+}
+
+#contra-usuario, 
+#femenino, 
+#foto-usuario, 
+#estudiante,
+#identificacion-tipo,
+#a-nacimiento {
+    margin-bottom   : 20px;
+    background-color: var(--jose-background);
+}
