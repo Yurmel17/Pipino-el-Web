@@ -1,12 +1,12 @@
 *,
-*:: after,
-*:: before {
+*::after,
+*::before {
     box-sizing: border-box;
 }
 :root {
-    --jose-pink : hsl(6, 32%, 46%);
-    --jose-pink__hover : hsl(6, 32%, 30%);
-    --jose-dark : hsl(340, 16%, 18%);
+    --jose-pink: hsl(6, 32%, 46%);
+    --jose-pink__hover: hsl(6, 32%, 30%);
+    --jose-dark: hsl(340, 16%, 18%);
     --jose-light: hsl(43, 23%, 64%);
     --jose-light__dark: hsl(43, 23%, 50%);
     --jose-light__hover: hsl(43, 23%, 40%);
@@ -15,105 +15,107 @@
 
 html,
 body {
-    margin          : 0;
-    padding         : 0;
-    scroll-behavior : smooth;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
     background-color: var(--jose-dark);
-    color           : var(--jose-light);
-    font-family     : 'Lobster Two', cursive;
+    color: var(--jose-light);
+    font-family: "Lobster Two", cursive;
     cursor: url(https://cur.cursors-4u.net/mechanics/mec-2/mec110.cur), auto !important;
 }
 
 body {
-    display        : flex;
-    flex-direction : column;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items    : center;
-    min-height     : 100vh;
-    width          : 100vw;
+    align-items: center;
+    min-height: 100vh;
+    width: 100vw;
     overflow-x: hidden;
 }
 
 form {
-    display       : flex;
+    display: flex;
     flex-direction: column;
 }
 
 fieldset {
-    display       : flex;
+    display: flex;
     flex-direction: column;
 }
 
 select,
 option {
     background-color: var(--jose-pink);
-    color           : #fff;
-    font-family     : 'Josefin Sans', sans-serif;
-    border-radius   : 5px;
+    color: #fff;
+    font-family: "Josefin Sans", sans-serif;
+    border-radius: 5px;
 }
 
-input, 
-select, 
+input,
+select,
 option {
     background-color: transparent;
-    border          : none;
-    color           : #FAFFFD;
-    padding         : 10px 10px 5px 5px;
+    border: none;
+    color: #fafffd;
+    padding: 10px 10px 5px 5px;
     outline: none;
 }
 
 input,
 input:focus,
 input:hover {
-    border-bottom   : 1px solid #FFFFFF;
+    border-bottom: 1px solid #ffffff;
     margin-bottom: 10px;
 }
 
-input[type=submit],
-input[type=reset] {
+input[type="submit"],
+input[type="reset"] {
     background-color: var(--jose-pink);
     border-bottom: none;
 }
 
-input[type=submit]:hover,
-input[type=reset]:hover {
+input[type="submit"]:hover,
+input[type="reset"]:hover {
     background-color: var(--jose-pink__hover);
     border-bottom: none;
-    cursor: url(https://ani.cursors-4u.net/symbols/sym-8/sym761.ani), url(https://ani.cursors-4u.net/symbols/sym-8/sym761.png), auto !important;
+    cursor: url(https://ani.cursors-4u.net/symbols/sym-8/sym761.ani),
+        url(https://ani.cursors-4u.net/symbols/sym-8/sym761.png), auto !important;
 }
 
-input[type=reset]:hover {
-    cursor: url(https://cur.cursors-4u.net/anime/ani-12/ani1135.ani), url(https://cur.cursors-4u.net/anime/ani-12/ani1135.png), auto !important;
+input[type="reset"]:hover {
+    cursor: url(https://cur.cursors-4u.net/anime/ani-12/ani1135.ani),
+        url(https://cur.cursors-4u.net/anime/ani-12/ani1135.png), auto !important;
 }
 
-input[type=submit] {
+input[type="submit"] {
     margin-top: 15px;
 }
 
-input[type=file] {
-    font-family: 'Josefin Sans', sans-serif;
+input[type="file"] {
+    font-family: "Josefin Sans", sans-serif;
 }
 
-input[type=file]::file-selector-button:hover {
+input[type="file"]::file-selector-button:hover {
     background-color: var(--jose-light__hover);
     cursor: url(https://ani.cursors-4u.net/games/gam-16/gam1537.cur), auto !important;
 }
 
-input[type=file]::file-selector-button {
+input[type="file"]::file-selector-button {
     background-color: var(--jose-light__dark);
-    color:#fff;
+    color: #fff;
     padding: 4px 5px;
     outline: none;
     border: none;
     border-radius: 5px;
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: "Josefin Sans", sans-serif;
 }
 
-#contra-usuario, 
-#femenino, 
-#foto-usuario, 
+#contra-usuario,
+#femenino,
+#foto-usuario,
 #estudiante,
 #identificacion-tipo,
 #a-nacimiento {
-    margin-bottom   : 20px;
+    margin-bottom: 20px;
 }
