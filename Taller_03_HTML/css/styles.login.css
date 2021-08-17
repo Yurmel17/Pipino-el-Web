@@ -4,18 +4,51 @@
     box-sizing: border-box;
 }
 
+:root {
+    --jose-pink: hsl(6, 32%, 46%);
+    --jose-pink__hover: hsl(6, 32%, 30%);
+    --jose-dark: hsl(340, 16%, 18%);
+    --jose-light: hsl(43, 23%, 64%);
+    --jose-light__dark: hsl(43, 23%, 50%);
+    --jose-light__hover: hsl(43, 23%, 40%);
+    --jose-brown: hsl(30, 14%, 34%);
+    --cursive-font: "Lobster Two", cursive;
+    --normal-font: font-family: "Josefin Sans", sans-serif;
+}
+
 html,
 body {
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
+    background-color: var(--jose-dark);
+    color: var(--jose-light);
 }
 
 main {
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
 
     align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-family: var(--cursive-font);
+}
+
+p, a {
+    font-family: var(--normal-font);
+}
+
+a {
+    text-decoration: none;
+    color: var(--jose-pink);
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 .c-logos {
@@ -47,6 +80,7 @@ form > div {
 
 form label {
     width: 20%;
+    align-self: flex-start;
 }
 
 form input:focus {
@@ -54,7 +88,7 @@ form input:focus {
 }
 
 form input {
-    width: 70%;
+    width: 100%;
 }
 
 form input[type="submit"] {
@@ -67,11 +101,26 @@ form input[type="submit"] {
     border: none;
 
     color: white;
-    background-color: hsl(240, 31%, 37%);
+    background-color: var(--jose-pink);
     border-radius: 5px;
 }
 
 form input[type="submit"]:hover {
-    background-color: hsl(240, 31%, 20%);
+    background-color: var(--jose-pink__hover);
     cursor: pointer;
+    font-family: var(--normal-font);
+}
+
+form input:not(input[type="submit"]) {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #ffffff;
+    margin-bottom: 10px;
+    color: #fafffd;
+    padding: 10px 10px 5px 5px;
+}
+
+form label,
+form input:not(input[type="submit"]) {
+    font-family: var(--cursive-font);
 }
