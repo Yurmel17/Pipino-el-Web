@@ -13,7 +13,7 @@
     --jose-light__hover: hsl(43, 23%, 40%);
     --jose-brown: hsl(30, 14%, 34%);
     --cursive-font: "Lobster Two", cursive;
-    --normal-font: font-family: "Josefin Sans", sans-serif;
+    --normal-font: "Josefin Sans", sans-serif;
 }
 
 html,
@@ -38,7 +38,8 @@ h1 {
     font-family: var(--cursive-font);
 }
 
-p, a {
+p,
+a {
     font-family: var(--normal-font);
 }
 
@@ -103,12 +104,12 @@ form input[type="submit"] {
     color: white;
     background-color: var(--jose-pink);
     border-radius: 5px;
+    font-family: var(--normal-font);
 }
 
 form input[type="submit"]:hover {
     background-color: var(--jose-pink__hover);
     cursor: pointer;
-    font-family: var(--normal-font);
 }
 
 form input:not(input[type="submit"]) {
