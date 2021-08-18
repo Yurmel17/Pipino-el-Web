@@ -1,0 +1,23 @@
+body {
+    background-color: #02040F;
+    font-family: "Josefin Sans", sans-serif;
+    color: #fff;
+}
+
+figure {
+    border: 3px solid #840032;
+    padding: 30px;
+    align-content: center;
+}
+
+img {
+    background-color: #fff;
+    margin-bottom: 10px;
+    display: block;
+    width: 30%;
+    border: 10px solid #fff;
+}
+
+figcaption {
+    text-align: justify;
+}
