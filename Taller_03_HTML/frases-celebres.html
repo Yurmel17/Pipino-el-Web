@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- import css -->
+    <link rel="stylesheet" href="./css/styles.frases-celebres.css" />
+
+    <!-- import fonts from google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&family=Lobster+Two&display=swap"
+        rel="stylesheet">
+
+    <title>Taller 3 | Frases Celebres </title>
+</head>
+
+<body>
+    <header>
+        <h1>Frases celebres</h1>
+    </header>
+    <main>
+        <form action="mailto:jathinson@gmail.com" method="POST" enctype="text/plain">
+            <label for="username">Nombre de usuario: </label>
+            <input type="text" name="username" required />
+            <label for="email">Correo: </label>
+            <input type="text" name="email" required />
+            <fieldset>
+                <legend>Escribe tu frase</legend>
+
+                <div>
+                    <label for="frase1">Frase 1</label>
+                    <textarea name="frase1" rows="4" cols="50"
+                        placeholder="Ingresa una frase celebre ..." required></textarea>
+                </div>
+                <div>
+                    <label for="frase2">Frase 2</label>
+                    <textarea name="frase2" rows="4" cols="50"
+                        placeholder="Ingresa una frase celebre ..." required></textarea>
+                </div>
+
+
+                <label for="frase-principal">Seleccionar frase principal</label>
+                <select name="frase-principal">
+                    <option value="frase1">Frase 1</option>
+                    <option value="frase2">Frase 2</option>
+                </select>
+            </fieldset>
+            <input type="submit" value="Envíar correo" />
+        </form>
+        <form action="./menu.html" method="GET">
+            <input type="submit" value="Envíar" />
+        </form>
+    </main>
+</body>
+
+</html>
