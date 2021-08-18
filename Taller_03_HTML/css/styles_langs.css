@@ -1,0 +1,16 @@
+figure {
+    border: 2px solid gray;
+    padding: 30px;
+    align-content: center;
+}
+
+img {
+    margin-bottom: 10px;
+    display: block;
+    width: 30%;
+    border: 1px solid black;
+}
+
+figcaption {
+    text-align: justify;
+}
