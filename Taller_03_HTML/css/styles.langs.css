@@ -1,13 +1,66 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+:root {
+    --jose-pink: hsl(6, 32%, 46%);
+    --jose-pink__hover: hsl(6, 32%, 30%);
+    --jose-dark: hsl(340, 16%, 18%);
+    --jose-dark__hover: hsl(340, 16%, 10%);
+    --jose-light: hsl(43, 23%, 64%);
+    --jose-light__dark: hsl(43, 23%, 50%);
+    --jose-light__hover: hsl(43, 23%, 40%);
+    --jose-brown: hsl(30, 14%, 34%);
+    --cursive-font: "Lobster Two", cursive;
+    --normal-font: "Josefin Sans", sans-serif;
+}
+
 body {
-    background-color: #02040F;
+    background-color: var(--jose-dark);
     font-family: "Josefin Sans", sans-serif;
     color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+}
+
+button[type="submit"] {
+    width: 140px;
+    height: 30px;
+    background-color: var(--jose-pink);
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+
+button[type="submit"]:hover {
+    cursor: pointer;
+    background-color: var(--jose-pink__hover);
+    outline: none;
+    border: none;
 }
 
 figure {
-    border: 3px solid #840032;
+    max-width: 500px;
+    width: 90vw;
+    min-width: 300px;
+
+    border: 3px solid var(--jose-light);
     padding: 30px;
-    align-content: center;
+}
+
+a {
+    display: flex;
+    justify-content: center;
 }
 
 img {
@@ -16,6 +69,7 @@ img {
     display: block;
     width: 30%;
     border: 10px solid #fff;
+    align-self: center;
 }
 
 figcaption {

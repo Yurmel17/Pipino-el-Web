@@ -7,6 +7,7 @@
     --jose-pink: hsl(6, 32%, 46%);
     --jose-pink__hover: hsl(6, 32%, 30%);
     --jose-dark: hsl(340, 16%, 18%);
+    --jose-dark__hover: hsl(340, 16%, 10%);
     --jose-light: hsl(43, 23%, 64%);
     --jose-light__dark: hsl(43, 23%, 50%);
     --jose-light__hover: hsl(43, 23%, 40%);
@@ -39,6 +40,21 @@ form {
     flex-direction: column;
 }
 
+button[type="submit"] {
+    width: 150px;
+    height: 30px;
+    color: white;
+    background-color: var(--jose-pink);
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--jose-pink__hover);
+    cursor: pointer;
+}
+
 fieldset {
     display: flex;
     flex-direction: column;
@@ -50,4 +66,23 @@ option {
     color: #fff;
     font-family: "Josefin Sans", sans-serif;
     border-radius: 5px;
+}
+
+table.table-dark {
+    background-color: rgb(56, 41, 35);
+    /* background-color: var(--jose-dark__hover); */
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+        rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+table.table-dark td,
+table.table-dark th {
+    border: none;
+    text-align: center;
+}
+
+table.table-dark th[rowspan="2"] {
+    height: 80px;
+    line-height: 80px;
 }
