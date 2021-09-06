@@ -6,43 +6,70 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Taller 4 | Otro Framework</title>
+
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 </head>
 
-<body>
-    <form method="POST" action="#">
-        <div>
-            <input type="text" name="id_usr" spellcheck="false" placeholder="ID del usuario: " />
+<body class="w-screen h-screen flex flex-col items-center pt-20 bg-gray-800">
+    <h1 class="mb-10 text-4xl text-gray-200">Formulario de Registro de Usuarios
+    </h1>
+    <form method=" POST" action="#" class="w-4/12 flex flex-col items-center">
+        <div class="mb-5 w-full flex justify-between">
+            <input
+                class="p-2 shadow-md md:shadow-lg rounded border border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                type="text" name="id_usr" spellcheck="false" placeholder="ID del usuario: " />
 
-            <label for="id_pais">ID del país</label>
-            <select name="id_pais">
-                <option value="1">Colombia</option>
-                <option value="2">Perú</option>
-                <option value="3">Argentina</option>
-                <option value="4">Brasil</option>
-                <option value="5">Bolivia</option>
-                <option value="6">Venezuela</option>
-                <option value="7">Guyana</option>
-                <option value="8">Chile</option>
-                <option value="9">Suriname</option>
-                <option value="10">Uruguay</option>
-                <option value="11">Paraguay</option>
-                <option value="12">Ecuador</option>
-            </select>
+
+            <div>
+                <label for="id_pais" class="text-gray-400">ID del país</label>
+                <select
+                    class="w-52 p-2 rounded shadow-md md:shadow-lg border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                    name="id_pais">
+                    <option value="1">Colombia</option>
+                    <option value="2">Perú</option>
+                    <option value="3">Argentina</option>
+                    <option value="4">Brasil</option>
+                    <option value="5">Bolivia</option>
+                    <option value="6">Venezuela</option>
+                    <option value="7">Guyana</option>
+                    <option value="8">Chile</option>
+                    <option value="9">Suriname</option>
+                    <option value="10">Uruguay</option>
+                    <option value="11">Paraguay</option>
+                    <option value="12">Ecuador</option>
+                </select>
+            </div>
         </div>
-        <div>
-            <input type="text" name="nombre" spellcheck="false" placeholder="Nombre: " />
-            <input type="text" name="apellido" spellcheck="false" placeholder="Apellido: " />
+        <div class="mb-5 w-full flex justify-between">
+            <input
+                class="p-2 shadow-md md:shadow-lg rounded border border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                type="text" name="nombre" spellcheck="false" placeholder="Nombre: " />
+            <input
+                class="p-2 shadow-md md:shadow-lg rounded border border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                type="text" name="apellido" spellcheck="false" placeholder="Apellido: " />
         </div>
-        <div>
-            <input type="text" name="direccion" spellcheck="false" placeholder="Dirección: " />
-            <input type="text" name="ccusuario" spellcheck="false" />
+        <div class="mb-5 w-full flex justify-between">
+            <input
+                class="p-2 shadow-md md:shadow-lg rounded border border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                type="text" name="direccion" spellcheck="false" placeholder="Dirección: " />
+            <input
+                class="p-2 shadow-md md:shadow-lg rounded border border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                type="text" name="ccusuario" spellcheck="false" placeholder="CC Usuario: " />
         </div>
-        <div>
-            <input type="password" name="ccpaswd" spellcheck="false" placeholder="Password: " />
-            <input type="text" name="email" spellcheck="false" placeholder="Email: " />
+        <div class="mb-5 w-full flex justify-between">
+            <input
+                class="p-2 shadow-md md:shadow-lg rounded border border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                type="password" name="ccpaswd" spellcheck="false" placeholder="Password: " />
+            <input
+                class="p-2 shadow-md md:shadow-lg rounded border border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                type="text" name="email" spellcheck="false" placeholder="Email: " />
         </div>
-        <input type="text" name="telefono" spellcheck="false" placeholder="Telefono: " />
-        <input type="submit" value="Registrar" />
+        <input
+            class="mb-5 p-2 shadow-md md:shadow-lg rounded border border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+            type="text" name="telefono" spellcheck="false" placeholder="Telefono: " />
+        <input
+            class="w-full p-2 bg-purple-600 cursor-pointer rounded hover:bg-purple-700 focus:outline-none focus:ring-purple-600 focus:ring-opacity-50 text-white"
+            type="submit" value="Registrar" />
     </form>
 </body>
 
