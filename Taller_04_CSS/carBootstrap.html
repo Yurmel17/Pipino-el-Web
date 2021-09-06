@@ -6,98 +6,181 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Taller 4 | Car Bootstrap</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
 </head>
 
-<body>
-    <form>
-        <fieldset>
+<body class="vh-100 vw-100">
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+    <form class="position-absolute top-50 start-50 translate-middle m-5 d-inline-flex flex-column form-floating w-75 vh-100 ">
+        <fieldset class="form-group mb-3">
             <legend>ID's</legend>
 
-            <label for="id_coche">ID del coche: </label>
-            <select name="id_coche">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-            </select>
+            <div class="row g-3 mb-2">
+            
+            <div class="col-md form-floating text-black"> 
+                <select class="form-select" name="id_coche" id="id_coche">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                </select>
+                <label for="id_coche">ID del coche</label>
+            </div>
 
-            <label for="id_movidoa">ID del Movido a: </label>
-            <select name="id_movidoa">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-            </select>
+            <div class="col-md form-floating text-black">
+                <select class="form-select" name="id_mov">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                </select>
+                <label for="id_mov">ID de combustible</label>
+            </div>
+            
+                <div class="col-md form-floating text-black">
+                    <select class="form-select" name="id_tipo">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                    <label for="id_tipo">ID del tipo</label>
+            </div>
 
-            <label for="id_tipocoche">ID del Tipo coche: </label>
-            <select name="id_tipocoche">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-            </select>
+            </div>
 
-            <label for="id_estado">ID del Estado: </label>
-            <select name="id_estado">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-            </select>
+            <div class="row g-3">
 
-            <label for="id_marca">ID de la marca: </label>
-            <select name="id_marca">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-            </select>
+                <div class="col-md form-floating text-black">
+                    <select class="form-select" name="id_estado">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                    <label for="id_estado">ID del Estado: </label>
+                </div>
 
-            <label for="id_usr">ID del Usuario: </label>
-            <select name="id_usr">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-            </select>
+                <div class="col-md form-floating text-black">
+                    <select class="form-select" name="id_marca">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                    <label for="id_marca">ID de la marca: </label>
+                </div>
+
+                <div class="col-md form-floating text-black">
+                    <select class="form-select" name="id_usr">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                    <label for="id_usr">ID del Usuario: </label>
+                </div>
+
+            </div>
 
         </fieldset>
         <fieldset>
             <legend>Detalles del coche</legend>
 
-            <input type="text" spellcheck="false" name="modelo" placeholder="Modelo: " />
-            <input type="text" spellcheck="false" name="anio" placeholder="Año: " />
-            <input type="text" spellcheck="false" name="detalle" placeholder="Detalle: " />
-            <input type="text" spellcheck="false" name="caja" placeholder="Caja: " />
-            <input type="text" spellcheck="false" name="motor" placeholder="Motor: " />
-            <input type="text" spellcheck="false" name="fechapub"
+            <div class="row g-12 mb-2">
+                <div class="col-3 form-floating text-black">
+                    <input class="form-control mb-2" type="text" spellcheck="false" name="modelo" placeholder="Modelo" id="modelo" />
+                    <label class="mx-lg-2" for="modelo">Modelo</label>
+                </div>
+                
+                <div class="col-2 form-floating text-black">
+                    <input class="form-control mb-2"type="text" spellcheck="false" name="anio" placeholder="Año: " id="anio" />
+                    <label class="mx-lg-2" for="anio">Año</label>
+                </div>
+                <div class="col-7 form-floating text-black">
+                    <input class="form-control mb-2"type="text" spellcheck="false" name="detalle" placeholder="Detalle: " id="detalle" />
+                    <label class="mx-lg-2" for="detalle">Detalle</label>
+                </div>
+            </div>
+
+            <div class="row g-12 mb-2">
+                <div class="col-3 form-floating text-black">
+                    <input class="form-control mb-2"type="text" spellcheck="false" name="caja" placeholder="Caja: " />
+                    <label class="mx-lg-2">Caja</label>
+                </div>
+                
+                <div class="col-2 form-floating text-black">
+                    <input class="form-control mb-2"type="text" spellcheck="false" name="motor" placeholder="Motor: " />
+                    <label class="mx-lg-2">Motor</label>
+                </div>
+
+                <div class="col-4 form-floating text-black">
+                    <input class="form-control mb-2"type="text" spellcheck="false" name="fechapub"
                 placeholder="Fecha publicación: " />
-            <input type="text" spellcheck="false" name="precio" placeholder="Precio: " />
-            <input type="text" spellcheck="false" name="moneda" placeholder="Moneda: " />
+                    <label class="mx-lg-2">Fecha de publicación</label>
+                </div>
+
+                <div class="col-2 form-floating text-black">
+                    <input class="form-control mb-2" type="text" spellcheck="false" name="precio" placeholder="Precio: " />
+                    <label class="mx-lg-2">Precio</label>
+                </div>
+
+                <div class="col form-floating text-black">
+                    <input class="form-control mb-2" type="text" spellcheck="false" name="moneda" placeholder="Moneda: " />
+                    <label class="mx-lg-2">Moneda</label>
+                </div>
+            </div>
+
         </fieldset>
 
         <fieldset>
             <legend>Otros detalles</legend>
 
-            <input type="text" spellcheck="false" name="cc_pic01" placeholder="Foto 1: " />
-            <input type="text" spellcheck="false" name="cc_pic02" placeholder="Foto 2: " />
-            <input type="text" spellcheck="false" name="cc_pic03" placeholder="Foto 3: " />
-            <input type="text" spellcheck="false" name="cc_destac" placeholder="Destacados: " />
+            <div class="row g-3 mb-2">
+                <div class="col form-floating text-black">
+                    <input class="form-control mb-2" type="text" spellcheck="false" name="cc_pic01" placeholder="Foto 1: " style="height: 180px;" />
+                    <label>Descripcion 1</label>
+                </div>
+
+                <div class="col form-floating text-black">
+                    <input class="form-control mb-2" type="text" spellcheck="false" name="cc_pic01" placeholder="Foto 1: " style="height: 180px;" />
+                    <label>Descripcion 2</label>
+                </div>
+
+                <div class="col form-floating text-black">
+                    <input class="form-control mb-4" type="text" spellcheck="false" name="cc_pic01" placeholder="Foto 1: " style="height: 180px;" />
+                    <label>Descripcion 3</label>
+                </div>
+            </div>
+
+            <!-- <input class="form-control mb-2" type="text" spellcheck="false" name="cc_pic01" placeholder="Foto 1: " /> -->
+            <!-- <input class="form-control mb-2" type="text" spellcheck="false" name="cc_pic02" placeholder="Foto 2: " />
+            <input class="form-control mb-2" type="text" spellcheck="false" name="cc_pic03" placeholder="Foto 3: " /> -->
+            <div class="form-floating text-black">
+                <input class="form-control mb-2" type="text" spellcheck="false" name="cc_destac" placeholder="Destacados" />
+                <label>Destacados</label>
+            </div>
+            
         </fieldset>
 
-        <input type="submit" value="Registrar coche" />
+        <input type="submit" class="btn btn-primary mt-4" value="Registrar coche" />
     </form>
 </body>
 
