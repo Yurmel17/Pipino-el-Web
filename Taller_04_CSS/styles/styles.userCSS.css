@@ -1,0 +1,9 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+:root {
+    --jose-pink: hsl(6, 32%, 46%);
+}
