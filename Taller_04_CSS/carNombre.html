@@ -6,98 +6,158 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Taller 4 | Car | Otro Framework</title>
+
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 </head>
 
-<body>
-    <form>
-        <fieldset>
-            <legend>ID's</legend>
+<body class="w-screen min-w-min flex flex-col items-center pt-4 bg-gray-800 overflow-x-hidden">
+    <h1 class="mb-10 text-4xl text-gray-200">Registro de Autos</h1>
+    <form method="POST" action="#"
+        class="w-4/12 flex flex-col items-center bg-gray-900 px-4 py-6 rounded mb-5">
+        <fieldset class="border-solid mb-6 w-full border-opacity-100 p-2 rounded"
+            style="border: 2px groove">
+            <legend class="text-indigo-400 p-2">ID's</legend>
 
-            <label for="id_coche">ID del coche: </label>
-            <select name="id_coche">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-            </select>
+            <div class="mb-5 w-full flex justify-between">
+                <label class="text-gray-400" for="id_coche">ID del coche: </label>
+                <select
+                    class="w-40 p-2 rounded shadow-md md:shadow-lg border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                    name="id_coche">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                </select>
+                <label class="text-gray-400" for="id_movidoa">ID del Movido a: </label>
+                <select
+                    class="w-40 p-2 rounded shadow-md md:shadow-lg border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                    name="id_movidoa">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                </select>
+            </div>
 
-            <label for="id_movidoa">ID del Movido a: </label>
-            <select name="id_movidoa">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-            </select>
+            <div class="mb-5 w-full flex justify-between">
+                <label class="text-gray-400" for="id_tipocoche">ID del Tipo coche: </label>
+                <select
+                    class="w-40 p-2 rounded shadow-md md:shadow-lg border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                    name="id_tipocoche">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                </select>
+                <label class="text-gray-400" for="id_estado">ID del Estado: </label>
+                <select
+                    class="w-40 p-2 rounded shadow-md md:shadow-lg border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                    name="id_estado">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                </select>
+            </div>
 
-            <label for="id_tipocoche">ID del Tipo coche: </label>
-            <select name="id_tipocoche">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-            </select>
-
-            <label for="id_estado">ID del Estado: </label>
-            <select name="id_estado">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-            </select>
-
-            <label for="id_marca">ID de la marca: </label>
-            <select name="id_marca">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-            </select>
-
-            <label for="id_usr">ID del Usuario: </label>
-            <select name="id_usr">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-            </select>
+            <div class="mb-5 w-full flex justify-between">
+                <label class="text-gray-400" for="id_marca">ID de la marca: </label>
+                <select
+                    class="w-40 p-2 rounded shadow-md md:shadow-lg border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                    name="id_marca">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                </select>
+                <label class="text-gray-400" for="id_usr">ID del Usuario: </label>
+                <select
+                    class="w-52 p-2 rounded shadow-md md:shadow-lg border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                    name="id_usr">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                </select>
+            </div>
 
         </fieldset>
-        <fieldset>
-            <legend>Detalles del coche</legend>
+        <fieldset class="border-solid mb-6 w-full border-opacity-100 p-2 rounded"
+            style="border: 2px groove">
+            <legend class="text-indigo-400 p-2">Detalles del coche</legend>
 
-            <input type="text" spellcheck="false" name="modelo" placeholder="Modelo: " />
-            <input type="text" spellcheck="false" name="anio" placeholder="Año: " />
-            <input type="text" spellcheck="false" name="detalle" placeholder="Detalle: " />
-            <input type="text" spellcheck="false" name="caja" placeholder="Caja: " />
-            <input type="text" spellcheck="false" name="motor" placeholder="Motor: " />
-            <input type="text" spellcheck="false" name="fechapub"
-                placeholder="Fecha publicación: " />
-            <input type="text" spellcheck="false" name="precio" placeholder="Precio: " />
-            <input type="text" spellcheck="false" name="moneda" placeholder="Moneda: " />
+            <div class="mb-5 w-full flex justify-between">
+                <input
+                    class="p-2 shadow-md md:shadow-lg rounded border border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                    type="text" spellcheck="false" name="modelo" placeholder="Modelo: " />
+                <input
+                    class="p-2 shadow-md md:shadow-lg rounded border border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                    type="text" spellcheck="false" name="anio" placeholder="Año: " />
+            </div>
+            <div class="mb-5 w-full flex justify-between">
+                <input
+                    class="p-2 shadow-md md:shadow-lg rounded border border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                    type="text" spellcheck="false" name="detalle" placeholder="Detalle: " />
+                <input
+                    class="p-2 shadow-md md:shadow-lg rounded border border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                    type="text" spellcheck="false" name="caja" placeholder="Caja: " />
+            </div>
+            <div class="mb-5 w-full flex justify-between">
+                <input
+                    class="p-2 shadow-md md:shadow-lg rounded border border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                    type="text" spellcheck="false" name="motor" placeholder="Motor: " />
+                <input
+                    class="p-2 shadow-md md:shadow-lg rounded border border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                    type="text" spellcheck="false" name="fechapub"
+                    placeholder="Fecha publicación: " />
+            </div>
+            <div class="mb-5 w-full flex justify-between">
+                <input
+                    class="p-2 shadow-md md:shadow-lg rounded border border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                    type="text" spellcheck="false" name="precio" placeholder="Precio: " />
+                <input
+                    class="p-2 shadow-md md:shadow-lg rounded border border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                    type="text" spellcheck="false" name="moneda" placeholder="Moneda: " />
+            </div>
         </fieldset>
 
-        <fieldset>
-            <legend>Otros detalles</legend>
+        <fieldset class="border-solid mb-6 w-full border-opacity-100 p-2 rounded"
+            style="border: 2px groove">
+            <legend class="text-indigo-400 p-2">Otros detalles</legend>
 
-            <input type="text" spellcheck="false" name="cc_pic01" placeholder="Foto 1: " />
-            <input type="text" spellcheck="false" name="cc_pic02" placeholder="Foto 2: " />
-            <input type="text" spellcheck="false" name="cc_pic03" placeholder="Foto 3: " />
-            <input type="text" spellcheck="false" name="cc_destac" placeholder="Destacados: " />
+            <div class="mb-5 w-full flex justify-between">
+                <input
+                    class="p-2 shadow-md md:shadow-lg rounded border border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                    type="text" spellcheck="false" name="cc_pic01" placeholder="Foto 1: " />
+                <input
+                    class="p-2 shadow-md md:shadow-lg rounded border border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                    type="text" spellcheck="false" name="cc_pic02" placeholder="Foto 2: " />
+            </div>
+            <div class="mb-5 w-full flex justify-between">
+                <input
+                    class="p-2 shadow-md md:shadow-lg rounded border border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                    type="text" spellcheck="false" name="cc_pic03" placeholder="Foto 3: " />
+                <input
+                    class="p-2 shadow-md md:shadow-lg rounded border border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                    type="text" spellcheck="false" name="cc_destac" placeholder="Destacados: " />
+            </div>
         </fieldset>
 
-        <input type="submit" value="Registrar coche" />
+        <input
+            class="w-full p-2 text-white bg-purple-600 cursor-pointer rounded hover:bg-purple-700 focus:outline-none focus:ring-purple-600 focus:ring-opacity-50"
+            type="submit" value="Registrar coche" />
     </form>
 </body>
 
