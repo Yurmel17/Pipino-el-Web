@@ -1,4 +1,4 @@
-$("#inputnusuario").click(function() {
-    $(this).hide()
-    alert("Hola")
-})
+document.addEventListener('DOMContentLoaded', () => {
+    const likesForm = document.getElementById('register-likes');
+    
+});
