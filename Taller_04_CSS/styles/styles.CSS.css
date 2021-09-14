@@ -1,0 +1,46 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+:root {
+    --jose-pink: hsl(6, 32%, 46%);
+    --jose-pink__hover: hsl(6, 32%, 30%);
+    --jose-dark: hsl(340, 16%, 18%);
+    --jose-dark__hover: hsl(340, 16%, 10%);
+    --jose-light: hsl(43, 23%, 64%);
+    --jose-light__dark: hsl(43, 23%, 50%);
+    --jose-light__hover: hsl(43, 23%, 40%);
+    --jose-brown: hsl(30, 14%, 34%);
+}
+
+input[type="submit"] {
+    background-color: var(--jose-pink);
+}
+
+input[type="submit"]:hover {
+    background-color: var(--jose-pink__hover);
+    cursor: pointer;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    background-color: var(--jose-dark);
+    color: var(--jose-light);
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
