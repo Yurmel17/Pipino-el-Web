@@ -13,15 +13,7 @@
     --jose-light__dark: hsl(43, 23%, 50%);
     --jose-light__hover: hsl(43, 23%, 40%);
     --jose-brown: hsl(30, 14%, 34%);
-}
-
-input[type="submit"] {
-    background-color: var(--jose-pink);
-}
-
-input[type="submit"]:hover {
-    background-color: var(--jose-pink__hover);
-    cursor: pointer;
+    --font: "Josefin Sans", sans-serif;
 }
 
 html,
@@ -31,7 +23,7 @@ body {
     scroll-behavior: smooth;
     background-color: var(--jose-dark);
     color: var(--jose-light);
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: var(--font);
 }
 
 body {
@@ -44,3 +36,44 @@ body {
     overflow-x: hidden;
 }
 
+form input[type="submit"] {
+    margin-top: 20px;
+    margin-bottom: 50px;
+    width: 100%;
+    height: 25px;
+
+    outline: none;
+    border: none;
+
+    color: white;
+    background-color: var(--jose-pink);
+    border-radius: 5px;
+    font-family: var(--font);
+}
+
+form input[type="submit"]:hover {
+    background-color: var(--jose-pink__hover);
+    cursor: pointer;
+}
+
+form input:not(input[type="submit"]) {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #ffffff;
+    margin-bottom: 10px;
+    color: #fafffd;
+    padding: 10px 10px 5px 5px;
+}
+
+select {
+    font-family: var(--font);
+    font-weight: bold;
+    border-width: none;
+    padding: 1px 6px;
+}
+
+fieldset {
+    margin-top: 15;
+    margin-bottom: 15;
+    align-items: center;
+}
