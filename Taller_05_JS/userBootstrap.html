@@ -23,12 +23,12 @@
             <label class="form-label text-white text-dark">Datos personales</label>
             <div class="input-group mb-2">
                 <label class="input-group-text" id='addnusuario'>Usuario</label>
-                <input class='form-control' type="text" name="id_usr" id='inputnusuario' spellcheck="false" placeholder="ID">
+                <input class='form-control' type="text" name="id_usr" id='id_usr' spellcheck="false" placeholder="ID">
             </div>
 
             <div class="input-group mb-2">
-            <label class="input-group-text" for="id_pais" id='addpais'>Pais</label>
-            <select class="form-select" name="id_pais" id="id_pais">
+            <label class="input-group-text" for="country_usr" id='addpais'>Pais</label>
+            <select class="form-select" name="id_pais" id="country_usr">
                 <option class="dropdown-item" value="1">Colombia</option>
                 <option value="2">Perú</option>
                 <option value="3">Argentina</option>
@@ -48,41 +48,47 @@
         <div>
             <div class="input-group mb-2">
                 <span class="input-group-text">Nombre</span>
-                <input class="form-control" type="text" name="nombre" spellcheck="false" placeholder="Inserte sus nombres" />
+                <input class="form-control" type="text" name="nombre" id="name_usr" spellcheck="false" placeholder="Inserte sus nombres" />
                 <span class="input-group-text">Apellido</span>
-                <input class="form-control" type="text" name="apellido" spellcheck="false" placeholder="Inserte sus apellidos" />
+                <input class="form-control" type="text" name="apellido" id="surname_usr" spellcheck="false" placeholder="Inserte sus apellidos" />
             </div>
 
         </div>
 
         <div class="input-group mb-3">
             <span class="input-group-text">Direccion</span>
-            <input class="form-control" type="text" name="direccion" spellcheck="false" placeholder="Dirección" />
+            <input class="form-control" type="text" name="direccion" id="direction_usr" spellcheck="false" placeholder="Dirección" />
         </div>
         
         <label class="form-label text-white text-dark">Datos de acceso</label>
         <div class="input-group mb-3">
             <span class="input-group-text">Usuario</span>
-            <input class="form-control" type="text" name="ccusuario" spellcheck="false" placeholder="Inserte su cuenta de usuario"/>
+            <input class="form-control" type="text" name="ccusuario"  id="account_usr" spellcheck="false" placeholder="Inserte su cuenta de usuario"/>
             <span class="input-group-text">Contraseña</span>
-            <input class="form-control" type="password" name="ccpaswd" spellcheck="false" placeholder="Inserte su contraseña" />
+            <input class="form-control" type="password" name="ccpaswd" id="pw_usr" spellcheck="false" placeholder="Inserte su contraseña" />
+        </div>
+
+        <div class="input-group mb-3">
+            <span class="input-group-text">Confirmar contraseña</span>
+            <input class="form-control" type="password" name="cccpaswd" id="pwconf_usr" spellcheck="false" placeholder="Confirme su contraseña" />
         </div>
         
         <label class="form-label text-white text-dark">Datos de contacto</label>
         <div class="input-group mb-2">
             <span class="input-group-text">@</span>
-            <input class="form-control" type="text" name="email" spellcheck="false" placeholder="Inserte su email" />
+            <input class="form-control" type="text" name="email" id="email_usr"  spellcheck="false" placeholder="Inserte su email" />
         </div>
 
         <div class="input-group mb-2">
             <span class="input-group-text">Telefono</span>
-            <input class="form-control" type="text" name="telefono" spellcheck="false" placeholder="Inserte su telefono" />
+            <input class="form-control" type="text" name="telefono" id="phone_usr" spellcheck="false" placeholder="Inserte su telefono" />
         </div>
 
         <input class="btn btn-primary my-3" type="submit" value="Registrar" />
     </form>
+
+    <script src="main.js"></script>
 </body>
 
-<script src="main.js"></script>
 
 </html>
