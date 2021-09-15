@@ -109,14 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('affordRangeInputMax').addEventListener('input', (event) => {
         updateInputRange(event.currentTarget);
     })
-})
-
-function toggleCheck(checked) {
-  var elm = document.getElementById('enableLikes');
-  if (checked != elm.checked) {
-    elm.click();
-  }
-}
+});
 
 function populateForm() {
     const targetParent = document.getElementById('favBrand');
@@ -125,34 +118,33 @@ function populateForm() {
     targetParent.innerHTML = '';
     
     for (const brand in brands) {
-        console.log({brand})
         var opt = document.createElement('option');
         opt.value = brand;
-        opt.text = brand;
-        targetParent.add(opt, null);
+        opt.textContent = brand;
+
+        targetParent.appendChild(opt);
     }
-    console.log(targetParent);
 }
 
-function updateBrandModels(brand) {
-    const select = document.getElementById('favBrand')
+function updateBrandModels(brand = "Bugatti") {
+    const select = document.getElementById('favModel')
     if (!brand in brands) {
         console.error("Selected brand doesn't exist.")
     }
-    // remove all children before appending new (this is unlikely)
-    select.innerHTML = ''
-    for (const model in brands[brand]) {
-        console.log({ model })
+    select.innerHTML = '';
+
+    for (const model of brands[brand]) {
         var opt = document.createElement('option');
         opt.value = model;
-        opt.innerText = model;
-        select.add(opt, null);
+        opt.textContent = model;
+
+        select.appendChild(opt);
     }
 }
 
 function updateInputRange(input) {
     const pTag = input.parentNode.getElementsByTagName('p')[0];
-    pTag.innerText = `$${input.value} pesos`
+    pTag.innerText = `$${input.value} pesos`;
 }
 
 function isAlphaNumeric(str) {
