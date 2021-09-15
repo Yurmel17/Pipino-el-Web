@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller 5 | Javascript</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+        crossorigin="anonymous">
+    <style>
+        #likesSection {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #likesSection>*:not(:first-child) {
+            display: none;
+        }
+
+        .in-group {
+            display: inline-flex;
+            align-items: center;
+            margin-bottom: 10px;
+            width: auto;
+        }
+
+        input[type=range] {
+            width: 200px;
+            margin-left: 5px;
+        }
+
+        input[type=range]~label {
+            background-color: red;
+        }
+
+        select,
+        input[type=color] {
+            height: 100%;
+            margin-right: 10px;
+        }
+
+        #likesSection.show>* {
+            display: flex;
+        }
+    </style>
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body class="vh-100 vw-100 bg-dark d-flex flex-column justify-content-center align-items-center">
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+
+    <form class='m-5 d-inline-flex flex-column w-75' method="POST" action="#" id="mainForm">
+        <div>
+            <label class="form-label text-white text-dark">Datos personales</label>
+            <div class="input-group mb-2">
+                <label class="input-group-text" id='addnusuario'>Usuario</label>
+                <input class='form-control' type="text" name="id_usr" id='id_usr' spellcheck="false"
+                    placeholder="ID">
+            </div>
+
+            <div class="input-group mb-2">
+                <label class="input-group-text" for="country_usr" id='addpais'>Pais</label>
+                <select class="form-select" name="id_pais" id="country_usr">
+                    <option class="dropdown-item" value="1">Colombia</option>
+                    <option value="2">Perú</option>
+                    <option value="3">Argentina</option>
+                    <option value="4">Brasil</option>
+                    <option value="5">Bolivia</option>
+                    <option value="6">Venezuela</option>
+                    <option value="7">Guyana</option>
+                    <option value="8">Chile</option>
+                    <option value="9">Suriname</option>
+                    <option value="10">Uruguay</option>
+                    <option value="11">Paraguay</option>
+                    <option value="12">Ecuador</option>
+                </select>
+            </div>
+
+        </div>
+        <div>
+            <div class="input-group mb-2">
+                <span class="input-group-text">Nombre</span>
+                <input class="form-control" type="text" name="nombre" id="name_usr"
+                    spellcheck="false" placeholder="Inserte sus nombres" />
+                <span class="input-group-text">Apellido</span>
+                <input class="form-control" type="text" name="apellido" id="surname_usr"
+                    spellcheck="false" placeholder="Inserte sus apellidos" />
+            </div>
+
+        </div>
+
+        <div class="input-group mb-3">
+            <span class="input-group-text">Direccion</span>
+            <input class="form-control" type="text" name="direccion" id="direction_usr"
+                spellcheck="false" placeholder="Dirección" />
+        </div>
+
+        <label class="form-label text-white text-dark">Datos de acceso</label>
+        <div class="input-group mb-3">
+            <span class="input-group-text">Usuario</span>
+            <input class="form-control" type="text" name="ccusuario" id="account_usr"
+                spellcheck="false" placeholder="Inserte su cuenta de usuario" />
+            <span class="input-group-text">Contraseña</span>
+            <input class="form-control" type="password" name="ccpaswd" id="pw_usr"
+                spellcheck="false" placeholder="Inserte su contraseña" />
+        </div>
+
+        <div class="input-group mb-3">
+            <span class="input-group-text">Confirmar contraseña</span>
+            <input class="form-control" type="password" name="cccpaswd" id="pwconf_usr"
+                spellcheck="false" placeholder="Confirme su contraseña" />
+        </div>
+
+        <label class="form-label text-white text-dark">Datos de contacto</label>
+        <div class="input-group mb-2">
+            <span class="input-group-text">@</span>
+            <input class="form-control" type="text" name="email" id="email_usr" spellcheck="false"
+                placeholder="Inserte su email" />
+        </div>
+
+        <div class="input-group mb-2">
+            <span class="input-group-text">Telefono</span>
+            <input class="form-control" type="text" name="telefono" id="phone_usr"
+                spellcheck="false" placeholder="Inserte su telefono" />
+        </div>
+
+        <div id="likesSection">
+            <div class="in-group" style="height: 35px;">
+                <label class="form-label text-white text-dark me-2" for="enableLikes"
+                    id='enableLikesLabel'
+                    style="height: 100%; line-height: 35px; margin: 0;">Registrar
+                    gustos </label>
+                <input type="radio" id="enableLikes" value="Registrar gustos"
+                    style="height: 100%;" />
+            </div>
+
+            <div>
+                <div class="input-group in-group">
+                    <label class="input-group-text" for="favColor" id='favColorLabel'>Elige tu color
+                        favorito</label>
+                    <input type="color" id="favColor" name="Color Favorito" value="#ff0000"
+                        style="border-top-right-radius: .25rem; border-bottom-right-radius: .25rem;">
+                </div>
+                <div class="input-group in-group">
+                    <label class="input-group-text" for="favBrand" id='favBrandLabel'>Marca de carro
+                        favorita</label>
+                    <select class="form-select" name="favBrand" id="favBrand">
+                    </select>
+                </div>
+                <div class="input-group in-group">
+                    <label class="input-group-text" for="favStyle" id='favStyleLabel'>Estilo de
+                        carro
+                        favorito</label>
+                    <select class="form-select" name="favStyle" id="favStyle">
+                        <option value="chevrolet">Todoterreno</option>
+                        <option value="chevrolet">Coupé</option>
+                        <option value="chevrolet">Berlina</option>
+                        <option value="chevrolet">Ecológico</option>
+                        <option value="chevrolet">Eléctrico</option>
+                        <option value="chevrolet">Familiar</option>
+                        <option value="chevrolet">Monovolumen</option>
+                        <option value="chevrolet">Utilitario</option>
+                    </select>
+                </div>
+                <div class="input-group in-group">
+                    <label class="input-group-text" for="favModel" id='favModelLabel'>Modelo de
+                        carro
+                        favorito</label>
+                    <select class="form-select" name="favModel" id="favModel">
+                    </select>
+                </div>
+
+            </div>
+            <div>
+                <div class="in-group">
+                    <label class="input-group-text" for="affordRangeInputMin"
+                        id='affordRangeMinLabel'>Mínimo valor dispuesto a pagar por un carro</label>
+                    <input class="me-2" type="range" name="affordRangeInputMin"
+                        id="affordRangeInputMin" min="0" max="999999999" step="10000000" />
+                    <p class="text-white text-dark me-4"
+                        style="margin: 0; height: 20px; line-height: 20px;"></p>
+                </div>
+
+                <div class="in-group">
+                    <label class="input-group-text" for="affordRangeInputMax"
+                        id='affordRangeMaxLabel'>Máximo valor</label>
+                    <input class="me-2" type="range" name="affordRangeInputMax"
+                        id="affordRangeInputMax" min="0" max="999999999" step="10000000" />
+                    <p class="text-white text-dark"
+                        style="margin: 0; height: 20px; line-height: 20px;"></p>
+                </div>
+
+            </div>
+        </div>
+
+        <input class="btn btn-primary my-3" type="submit" value="Registrar" />
+    </form>
+
+    <script src="main.js"></script>
+</body>
+
+
+</html>
