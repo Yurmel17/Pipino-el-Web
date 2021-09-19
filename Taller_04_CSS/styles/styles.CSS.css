@@ -77,3 +77,14 @@ fieldset {
     margin-bottom: 15;
     align-items: center;
 }
+
+.center-line {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 40% 10% 40% 10%;
+}
