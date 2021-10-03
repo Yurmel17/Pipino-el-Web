@@ -1,0 +1,77 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+:root {
+    --input-radius: 4px;
+    --input-left-padding: 10px;
+    --icon-width: 20px;
+    --input-right-padding: 40px;
+    --font-color: rgb(51, 50, 50);
+    --light-gray: rgb(207, 207, 207);
+    --green: rgb(22, 182, 22);
+    --gray: #6c757d;
+    --cell-width: 50px;
+    --cell-small-width: 30px;
+}
+
+.in-group {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 10px;
+    width: auto;
+}
+
+.input--icon {
+    position: relative;
+    margin-bottom: 20px;
+    width: 100%;
+    /* height: 40px; */
+    padding: 5px 0px;
+    /* padding-left: 10px; */
+    /* padding-right: var(--input-right-padding); */
+}
+
+form > input {
+    margin-bottom: 20px;
+}
+
+.input--icon input {
+    width: 100%;
+    height: 40px;
+    padding: 5px 2px;
+    padding-left: var(--input-left-padding);
+    padding-right: var(--input-right-padding);
+}
+
+.input--icon svg {
+    width: var(--icon-width);
+    height: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 15px;
+
+    fill: rgb(148, 147, 147);
+}
+
+form input {
+    border-radius: var(--input-radius);
+    padding-left: var(--input-left-padding);
+    /* this deal with bootstrap hiearchy */
+    border: solid 1px var(--light-gray) !important;
+    height: 40px;
+    color: var(--font-color);
+}
+
+form input:focus {
+    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+    outline: none;
+}
+
+form input::placeholder {
+    font-size: 15 px;
+    color: rgb(158, 158, 158);
+}
