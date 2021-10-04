@@ -12,6 +12,7 @@
     --font-color: rgb(51, 50, 50);
     --light-gray: rgb(207, 207, 207);
     --green: rgb(22, 182, 22);
+    --red-wrong: rgb(235, 65, 65);
     --gray: #6c757d;
     --cell-width: 50px;
     --cell-small-width: 30px;
@@ -34,7 +35,9 @@
     /* padding-right: var(--input-right-padding); */
 }
 
-form > input {
+form > .feedback-text,
+form > input:first-of-type,
+form > input:nth-of-type(2) {
     margin-bottom: 20px;
 }
 
@@ -56,22 +59,78 @@ form > input {
 
     fill: rgb(148, 147, 147);
 }
+.input--icon .input-wrapper {
+    position: relative;
+}
 
-form input {
+.feedback-text {
+    color: var(--red-wrong);
+    visibility: hidden;
+}
+
+/* invalid inputs */
+
+.input--icon .invalid-input + .feedback-text {
+    visibility: visible;
+}
+
+.invalid-input {
+    border: solid 2px var(--red-wrong) !important;
+}
+
+.invalid-input + svg {
+    fill: var(--red-wrong);
+}
+
+.invalid-input + div {
+    visibility: visible;
+}
+
+.invalid-input:focus {
+    box-shadow: var(--red-wrong) 0px 0px 0px 3px;
+    outline: none;
+}
+
+form {
+    padding: 0;
+}
+
+form input:not(input[type="checkbox"], input[type="submit"]) {
     border-radius: var(--input-radius);
     padding-left: var(--input-left-padding);
     /* this deal with bootstrap hiearchy */
-    border: solid 1px var(--light-gray) !important;
+    border: solid 1px var(--light-gray);
     height: 40px;
     color: var(--font-color);
 }
 
 form input:focus {
-    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+    box-shadow: rgba(71, 136, 233, 0.973) 0px 0px 0px 3px;
     outline: none;
 }
 
 form input::placeholder {
     font-size: 15 px;
     color: rgb(158, 158, 158);
+}
+
+#optionalSection {
+    display: flex;
+    visibility: hidden;
+}
+
+#optionalSection.active {
+    visibility: visible;
+}
+
+#illness {
+    visibility: hidden;
+}
+
+#illness.active {
+    visibility: visible;
+}
+
+#datepicker {
+    width: 150px;
 }

@@ -25,3 +25,6 @@ sudo nginx -t
 
 # restart nginx service
 sudo systemctl restart nginx
+
+# log info
+echo "server set up successfully. Check the page at http://localhost:3333"
